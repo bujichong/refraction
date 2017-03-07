@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>用户管理 - 爱尔医院筹建管理系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body>
+
+<div class="wrapper-popForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <!-- <form class="soForm hk_form pad-t15"> -->
+<form class="form-horizontal easy-form pad-t15 pad-l20 pad-r30" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+
+        <fieldset>
+           <div class="form-group">
+              <label class="col-xs-2 control-label">用户名：</label>
+              <div class="col-xs-4">
+                 <input class="form-control easyui-validatebox required" type="text" name="userName" value="" maxlength="20" placeholder="用户名" data-options="required:true,invalidMessage:'请输入用户名'" />
+              </div>
+              <label class="col-xs-2 control-label">姓名：</label>
+              <div class="col-xs-4">
+                 <input class="form-control easyui-validatebox required" type="text" name="realName" value="" maxlength="20" placeholder="姓名" data-options="required:true,invalidMessage:'请输入姓名'" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">密码：</label>
+              <div class="col-xs-4">
+                 <input class="form-control easyui-validatebox required"  id="password" type="password" name="password" value="" maxlength="20" placeholder="默认密码123456" data-options="required:true,invalidMessage:'请输入密码'" />
+              </div>
+              <label class="col-xs-2 control-label">确认密码：</label>
+              <div class="col-xs-4">
+                 <input class="form-control easyui-validatebox required" type="password" name="repassword" value="" maxlength="20" placeholder="再一次输入密码" data-options="required:true,validType:'equalTo[\'#password\']',invalidMessage:'两次密码不一致', missingMessage:'请再一次输入密码'" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">电话号码：</label>
+              <div class="col-xs-4">
+                 <input class="form-control easyui-validatebox required" type="text" name="mobile" value="" maxlength="20" placeholder="电话号码" />
+              </div>
+              <label class="col-xs-2 control-label">性别：</label>
+              <div class="col-xs-4">
+                  <label class="radio-inline"><input class="rad {required:true}"  type="radio" value="1" name="sex" />男</label>
+                  <label class="radio-inline"><input class="rad" type="radio" value="2" name="sex" />女</label>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">Email：</label>
+              <div class="col-xs-4">
+                 <input class="form-control easyui-validatebox required email" type="text" name="mobile" value="" maxlength="20" placeholder="请输入email地址" />
+              </div>
+              <label class="col-xs-2 control-label">关联组织：</label>
+              <div class="col-xs-4">
+                <input type="hidden" id="userGroupId" class="txt" name="userGroupId" />
+                 <input class="form-control easyui-validatebox hk_pop required" data-opt="{type:'tree',url:'json/groupTree.js',title:false,valueId:'userGroupId',justLeaf:true}" type="text" name="name" value="" maxlength="20" placeholder="请选择关联组织" readonly="readonly" />
+                  <!-- <input class="form-control required hk_drop" type="text" name="orgId" url="json/dropDept.js" /> -->
+<!--                 <select name="orgId" class="form-control required">
+                  <option value="">请选择...</option>
+                  <option value="1">部门一</option>
+                  <option value="2">部门二</option>
+                  <option value="3">部门三</option>
+                  <option value="4">部门四</option>
+                </select> -->
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">QQ：</label>
+              <div class="col-xs-4">
+                 <input class="form-control number" type="text" name="QQ" value="" maxlength="20" placeholder="QQ号码" />
+              </div>
+              <label class="col-xs-2 control-label">微信：</label>
+              <div class="col-xs-4">
+                 <input class="form-control" type="text" name="weChat" value="" maxlength="20" placeholder="" />
+              </div>
+
+           </div>
+
+           <div class="form-group">
+<!--               <label class="col-xs-2 control-label">角色：</label>
+              <div class="col-xs-4">
+                <select name="roleId" class="form-control required">
+                  <option value="">请选择...</option>
+                  <option value="1">角色一</option>
+                  <option value="2">角色二</option>
+                  <option value="3">角色三</option>
+                  <option value="4">角色四</option>
+                </select>
+              </div> -->
+              <label class="col-xs-2 control-label">账号状态：</label>
+              <div class="col-xs-4">
+                <label class="radio-inline"><input class="rad {required:true}"  type="radio" value="1" name="state" />启用</label>
+                <label class="radio-inline"><input class="rad"   type="radio" value="2" name="state" />停用</label>
+              </div>
+           </div>
+
+        </fieldset>
+
+        <p class="pad-t10 center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="button" class="btn btn-default btn-formS btn-cancel" name="btnCancel" value="取 消" />
+        </p>
+    </form>
+</div>
+
+
+
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

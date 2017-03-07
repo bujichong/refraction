@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>模块管理 - 爱尔医院筹建管理系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body data-js="sys:moduleAdd">
+<!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+<form class="form-horizontal hk_form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+  <div class="h420 overauto">
+    <h4 class="h4-form"><span class="s-t">基础信息</span></h4>
+    <fieldset class="fieldset-group">
+       <div class="form-group">
+        <label class="col-xs-2 control-label">名称：</label>
+        <div class="col-xs-4">
+           <input class="form-control required" type="text" name="name" value="" maxlength="20" placeholder="请填写模块名称" />
+        </div>
+        <label class="col-xs-2 control-label">优先级：</label>
+        <div class="col-xs-4">
+           <input class="form-control required number" type="text" name="name" value="99" maxlength="20" placeholder="请填写优先级" />
+        </div>
+      </div>
+       <div class="form-group">
+        <label class="col-xs-2 control-label">授权名称：</label>
+        <div class="col-xs-4">
+           <input class="form-control required" type="text" name="name" value="" maxlength="20" placeholder="请填写授权名称" />
+        </div>
+        <label class="col-xs-2 control-label">URL：</label>
+        <div class="col-xs-4">
+           <input class="form-control required" type="text" name="name" value="#" maxlength="20" placeholder="请填写URL" />
+        </div>
+      </div>
+       <div class="form-group">
+          <label class="col-xs-2 control-label">描述：</label>
+          <div class="col-xs-10">
+             <input class="form-control" type="text" name="name" value="" maxlength="30" placeholder="请填写模块描述" />
+          </div>
+       </div>
+       <div class="form-group">
+          <label class="col-xs-2 control-label">自定义授权：</label>
+          <div class="col-xs-10">
+             <label class="checkbox-inline pad-r10"><input type="checkbox" name="moduleType" value="add"> 增</label>
+             <label class="checkbox-inline pad-r10"><input type="checkbox" name="moduleType" value="del"> 删</label>
+             <label class="checkbox-inline pad-r10"><input type="checkbox" name="moduleType" value="edit"> 改</label>
+             <label class="checkbox-inline pad-r10"><input type="checkbox" name="moduleType" value="look"> 查</label>
+          </div>
+       </div>
+    </fieldset>
+
+    <h4 class="h4-form"><span class="s-t">动态新增</span></h4>
+    <div class="addNewFuncBox">
+      <fieldset id="fieldset-new-0" class="fieldset-group fieldset-new">
+           <div class="form-group">
+            <label class="col-xs-2 control-label">名称：</label>
+            <div class="col-xs-4">
+               <input class="form-control required" type="text" name="name" value="" maxlength="20" placeholder="请填写名称" />
+            </div>
+            <label class="col-xs-2 control-label">短名：</label>
+            <div class="col-xs-4">
+               <input class="form-control required" type="text" name="name" value="" maxlength="20" placeholder="用来授权验证" />
+            </div>
+           </div>
+           <div class="form-group">
+              <label class="col-xs-2 control-label">描述：</label>
+              <div class="col-xs-10">
+                 <input class="form-control" type="text" name="name" value="" maxlength="30" placeholder="请填写描述" />
+              </div>
+           </div>
+           <span class="s-closeFieldset"><em class="em-x"></em>删除</span>
+        </fieldset>
+      </div>
+
+      <div class="pad-r25 right"><span class="btn btn-primary btn-addNewFunc"><b class="glyphicon glyphicon-plus"></b> 动态新增授权</span></div>
+
+    </div>
+
+    <div class="center pad-t15">
+        <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+        <input type="button" class="btn btn-default btn-formS btn-cancel" name="btnCancel" value="取 消" />
+    </div>
+
+
+</form>
+
+<script type="text/javascript" src="js/lib/template.js"></script>
+
+<script id="addNewFunc" type="text/html">
+<fieldset id="fieldset-new-{{id}}" class="fieldset-group fieldset-new">
+     <div class="form-group">
+      <label class="col-xs-2 control-label">名称：</label>
+      <div class="col-xs-4">
+         <input class="form-control required" type="text" name="name" value="" maxlength="20" placeholder="请填写名称" />
+      </div>
+      <label class="col-xs-2 control-label">短名：</label>
+      <div class="col-xs-4">
+         <input class="form-control required" type="text" name="name" value="" maxlength="20" placeholder="用来授权验证" />
+      </div>
+     </div>
+     <div class="form-group">
+        <label class="col-xs-2 control-label">描述：</label>
+        <div class="col-xs-10">
+           <input class="form-control" type="text" name="name" value="" maxlength="30" placeholder="请填写描述" />
+        </div>
+     </div>
+     <span class="s-closeFieldset"><em class="em-x"></em>删除</span>
+  </fieldset>
+</script>
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

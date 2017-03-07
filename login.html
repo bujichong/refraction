@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<title>欢迎使用爱尔屈光病历数据管理系统-用户登录</title>
+<link type="text/css" rel="stylesheet" media="all" href="css/login.css" />
+</head>
+<body>
+<form action="doLogin.htm" method="post" id="loginFrm">
+<input type="hidden" name="auth" value="true"/>
+<input type="hidden" id="p" value="cwzn"/>
+
+<div class="loginWrap">
+    <h1 class="h1-logo">爱尔眼科</h1>
+
+    <div class="loginBox">
+      <div class="wrapper">
+        <div class="loginC">
+          <h2 class="h2-title">用户登录</h2>
+          <div class="loginCont">
+            <p id="errorMsg"></p>
+            <p class="p-item"><label class="lab-item">用户名：</label><input type="text" class="txt-login txt-user" name="user_code" id="username" placeholder="请输入用户名" /></p>
+            <p class="p-item"><label class="lab-item">密　码：</label><input type="password" class="txt-login txt-pass" name="password" id="password" placeholder="请输入密码" /></p>
+            <!-- <p class="p-item"><label class="lab-item">验证码：</label><input type="text" class="txt txt-login txt-code" name="txt" /><img class="img-code" src="images/login/code.png" alt="" /></p> -->
+            <p class="p-item p-btn"><input type="submit" class="btn" name="btnSubmit" value="登 录" /></p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="copyrightInfo">
+    <p><span class="s-copyright">爱尔眼科医院集团 版权所有 <em class="em-copyright">Copyright © 2004-2016 Aier EYE Hospital All Rights Reserved. </em></span><a class="a-icp" href="http://www.miitbeian.gov.cn/" target="_blank">湘公网安备 43010302000139号</a></p>
+  </div>
+</div>
+</form>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/lib/md5.js"></script>
+<script type="text/javascript">
+
+//登录页面单独加载，脚本不外调
+var $eye = $eye || {};
+$eye.login ={
+  init : function () {
+    var me = this;
+    window.console && console.log('login init');
+    me.submitLogin();//登录事件
+    me.noInWindow();//被内嵌(非法登录或登录超时)，则跳出置顶
+
+    me.pageAutoH();//页面高度超出649则自动适应
+    $(window).resize(function () {
+      me.pageAutoH();
+    });
+  },
+  submitLogin : function () {
+    var me = this;
+    $('.btn-cancel').click(function () {
+        me._showMsg('',3);
+    });
+    $('#loginFrm').submit(function(){
+      var user_code=$("#username").val() , p=$('#p').val(), password=$('#password').val();
+      if(!user_code){
+        me._showMsg('请输入用户名',2);
+        $("#username").focus();
+        return false;
+      }
+      if(!password){
+        me._showMsg('请输入密码!',2);
+        $("#password").focus();
+        return false;
+      }
+      me._showMsg('登录中，请稍候...',1);
+      var s=md5(md5(password)+p);
+      $.ajax({
+        url : 'json/true.js',
+        dataType : 'json',
+        type : 'post',
+        data : {user_code:user_code,s:s},
+        success : function(rst){
+          if(rst.state){
+            me._showMsg('登录成功！转向中...',1);
+            window.location.href="index.html";
+          }else{
+            me._showMsg(rst.msg,2);
+          }
+        },
+        error : function(XMLHttpRequest, textStatus, errorThrown){
+          me._showMsg('连接失败，请重新点击登录或联系管理员...',2);
+        }
+      });
+      return false;
+    });
+  },
+  noInWindow : function () {
+    if(window.top !== window.self){window.top.location = window.location;}
+  },
+  pageAutoH : function () {
+    var wh = $(window).height();
+    $('body')[wh>649?'addClass':'removeClass']('body-superH');
+  },
+  $msg : $('#errorMsg'),
+  _showMsg : function (msg,type) {
+    var $msg = this.$msg;
+    if (type==1) {
+      $msg.removeClass('validateErr').addClass('validateOk').text(msg);
+    }
+    if (type==2) {
+      $msg.removeClass('validateOk').addClass('validateErr').text(msg);
+    };
+    if (type==3) {
+      $msg.removeClass('validateOk').removeClass('validateErr').text(msg);
+    };
+  }
+}
+
+$(function () {
+  $eye.login.init();//登录页面初始化
+});
+</script>
+</body>
+</html>

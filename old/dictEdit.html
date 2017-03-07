@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>数据字典 - 爱尔医院筹建管理系统</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/base.css" />
+</head>
+
+<body>
+<div class="wrapper-popForm">
+
+    <form class="soForm hk_form pad-t15 pad-r30" method="post" data-opt="" id="vform" action="json/true.js">
+        <div class="row-fluid">
+            <div class="p6"><p class="p-item">
+                <label class="lab-item ">组别：</label>
+                <input type="text" name="group" value="" maxlength="20" class="txt required " />
+            </p></div>
+            <div class="p6"><p class="p-item">
+                <label class="lab-item ">类别：</label>
+                    <input type="text" name="type" value="" maxlength="20" class="txt required " />
+            </p></div>
+        </div>
+        <div class="row-fluid">
+            <div class="p6"><p class="p-item">
+                <label class="lab-item ">组字典项标识：</label>
+                <input type="text" name="key" value="" maxlength="20" class="txt required " />
+            </p></div>
+            <div class="p6"><p class="p-item">
+                <label class="lab-item ">字典项值：</label>
+                    <input type="text" name="value" value="" maxlength="20" class="txt required " />
+            </p></div>
+        </div>
+        <div class="row-fluid">
+            <div class="p6"><p class="p-item">
+                <label class="lab-item ">排序：</label>
+                    <input type="text" name="sort" value="" maxlength="20" class="txt number " />
+            </p></div>
+            <div class="p6"><p class="p-item">
+                <label class="lab-item ">状态：</label>
+                <label class="lab-val"><input class="rad {required:true}"  type="radio" value="1" name="state" />启用</label>
+                <label class="lab-val"><input class="rad"   type="radio" value="2" name="state" />停用</label>
+            </p></div>
+        </div>
+        <div class="row-fluid">
+            <div class="p12"><p class="p-item">
+                <label class="lab-item ">描述：</label>
+                <textarea name="desc" class="txta"></textarea>
+            </p></div>
+        </div>
+        <p class="p-item p-btn center">
+            <input type="submit" class="btn btn-submit" name="btnSubmit" value="保 存" />
+            <input type="button" class="btn btn-cancel" name="btnCancel" value="取 消" />
+        </p>
+    </form>
+</div>
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

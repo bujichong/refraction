@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>上传文件 - 爱尔医院筹建管理系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+<script type="text/javascript">
+ var ctx="locallost";
+</script>
+</head>
+
+<body data-js="upload:upload">
+<div class="wrapper-popForm">
+
+    <form class="form-horizontal hk_form pad-t15 pad-r30" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+        <fieldset>
+           <div class="form-group">
+              <label class="col-xs-2 control-label">名称：</label>
+              <div class="col-xs-8">
+                 <input class="form-control required" type="text" name="group" value="" maxlength="20" placeholder="名称" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">排序：</label>
+              <div class="col-xs-8">
+                 <input class="form-control number" type="text" name="sort" value="" maxlength="20" placeholder="0" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">上传方式1：</label>
+              <div class="col-xs-8">
+                <div id="uploader"></div><span class="orange">请上传小于50M的文件</span>
+                <input type="hidden" id="dept" class="txt" name="dept" value=""/>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">上传方式2：</label>
+              <div class="col-xs-8">
+              <input id="itemId" name="workitemid" type="hidden"  value="${entity.id}"/>
+                <div id="uploader2"></div><span class="orange">请上传小于50M的文件</span>
+                <input id="fileNameUUID" name="fileNameUUID" type="hidden"  value=""/>
+                <input id="fileNames" name="fileNames" type="hidden"  value=""/>
+                <input id="filePaths" name="filePaths" type="hidden"  value=""/>
+                <input id="fileSizes" name="fileSizes" type="hidden"  value=""/>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">描述：</label>
+              <div class="col-xs-8">
+                <textarea name="desc" class="form-control" rows="3"></textarea>
+              </div>
+           </div>
+
+        </fieldset>
+        <p class="p-item p-btn center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="button" class="btn btn-default btn-formS btn-cancel" name="btnCancel" value="取 消" />
+        </p>
+    </form>
+
+</div>
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

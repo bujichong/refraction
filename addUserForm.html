@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>数据字典 - 爱尔医院筹建管理系统</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body>
+<div class="wrapper-popForm">
+
+<form class="form-horizontal hk_form pad-t25 pad-l20 pad-r30" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+
+     <div class="form-group">
+        <label class="col-xs-2 control-label">证件号码：</label>
+        <div class="col-xs-4">
+            <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+        </div>
+        <label class="col-xs-2 control-label">姓名：</label>
+        <div class="col-xs-4">
+            <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+        </div>
+     </div>
+
+     <div class="form-group">
+        <label class="col-xs-2 control-label">出生日期：</label>
+        <div class="col-xs-4">
+            <input class="form-control hk_date" style="width:100%;" type="text" name="du" value="" maxlength="20" placeholder="" />
+        </div>
+        <label class="col-xs-2 control-label">性别：</label>
+        <div class="col-xs-4">
+          <select class="drop form-control" name="drop">
+            <option value="" selected="selected">请选择...</option>
+            <option value="1">男</option>
+            <option value="2">女</option>
+          </select>
+        </div>
+     </div>
+
+        <p class="p-item p-btn center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="button" class="btn btn-warning btn-formS btn-cancel" name="btnCancel" value="取 消" />
+        </p>
+    </form>
+</div>
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

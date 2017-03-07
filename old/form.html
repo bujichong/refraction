@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>表单页</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- <h2 class="h2-pageTitle">用户信息</h2> -->
+
+<div class="wrapper-popForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <!-- <form class="soForm hk_form pad-t15"> -->
+<form class="form-horizontal hk_form pad-t15" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+
+        <fieldset>
+           <div class="form-group">
+              <label class="col-xs-2 control-label">用户名：</label>
+              <div class="col-xs-4">
+                 <input class="form-control required" type="text" name="userName" value="" maxlength="20" placeholder="用户名" />
+              </div>
+              <label class="col-xs-2 control-label">姓名：</label>
+              <div class="col-xs-4">
+                 <input class="form-control required" type="text" name="realName" value="" maxlength="20" placeholder="姓名" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">密码：</label>
+              <div class="col-xs-4">
+                 <input class="form-control required"  id="password" type="password" name="password" value="" maxlength="20" placeholder="密码" />
+              </div>
+              <label class="col-xs-2 control-label">确认密码：</label>
+              <div class="col-xs-4">
+                 <input class="form-control required {equalTo:'#password'}" type="password" name="repassword" value="" maxlength="20" placeholder="再输入一次密码" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">手机号：</label>
+              <div class="col-xs-4">
+                 <input class="form-control required mobile" type="text" name="mobile" value="" maxlength="20" placeholder="手机号码" />
+              </div>
+              <label class="col-xs-2 control-label">性别：</label>
+              <div class="col-xs-4">
+                  <label class="radio-inline"><input class="rad {required:true}"  type="radio" value="1" name="sex" />男</label>
+                  <label class="radio-inline"><input class="rad" type="radio" value="2" name="sex" />女</label>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">Email：</label>
+              <div class="col-xs-4">
+                 <input class="form-control required email" type="text" name="mobile" value="" maxlength="20" placeholder="请输入email地址" />
+              </div>
+              <label class="col-xs-2 control-label">部门：</label>
+              <div class="col-xs-4">
+                <select name="orgId" class="form-control required">
+                  <option value="">请选择...</option>
+                  <option value="1">部门一</option>
+                  <option value="2">部门二</option>
+                  <option value="3">部门三</option>
+                  <option value="4">部门四</option>
+                </select>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">QQ：</label>
+              <div class="col-xs-4">
+                 <input class="form-control number" type="text" name="QQ" value="" maxlength="20" placeholder="QQ号码" />
+              </div>
+              <label class="col-xs-2 control-label">角色：</label>
+              <div class="col-xs-4">
+                <select name="roleId" class="form-control required">
+                  <option value="">请选择...</option>
+                  <option value="1">角色一</option>
+                  <option value="2">角色二</option>
+                  <option value="3">角色三</option>
+                  <option value="4">角色四</option>
+                </select>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-2 control-label">微信：</label>
+              <div class="col-xs-4">
+                 <input class="form-control" type="text" name="weChat" value="" maxlength="20" placeholder="" />
+              </div>
+              <label class="col-xs-2 control-label">账号状态：</label>
+              <div class="col-xs-4">
+                <label class="radio-inline"><input class="rad {required:true}"  type="radio" value="1" name="state" />正常</label>
+                <label class="radio-inline"><input class="rad"   type="radio" value="2" name="state" />停用</label>
+              </div>
+           </div>
+
+        </fieldset>
+
+        <p class="p-item p-btn center">
+            <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value=" 保 存 " />
+            <input type="button" class="btn btn-default btn-formS btn-cancel" name="btnCancel" value=" 取 消 " />
+        </p>
+    </form>
+</div>
+
+
+
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>角色管理 - 爱尔医院筹建管理系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body>
+<div class="wrapper-popForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <form class="form-horizontal hk_form pad-t25 pad-r30" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+        <fieldset>
+           <div class="form-group">
+              <label class="col-xs-4 control-label">名称：</label>
+              <div class="col-xs-7">
+                 <input class="form-control required" type="text" name="name" value="" maxlength="20" placeholder="请填写组织名称" />
+              </div>
+            </div>
+           <div class="form-group">
+              <label class="col-xs-4 control-label">描述：</label>
+              <div class="col-xs-7">
+                <textarea class="form-control" name="desc" placeholder="请填写组织描述" rows="3"></textarea>
+              </div>
+           </div>
+        </fieldset>
+
+
+              <div class="col-xs-offset-4 pad-l5">
+                  <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+                  <input type="button" class="btn btn-default btn-formS btn-cancel" name="btnCancel" value="取 消" />
+              </div>
+
+
+    </form>
+</div>
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

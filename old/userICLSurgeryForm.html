@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>ICL手术记录 - 屈光病历数据系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body>
+
+<div class="wrapper-iframeForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <!-- <form class="soForm hk_form pad-t15"> -->
+<form class="form-horizontal formA easy-form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+
+        <fieldset>
+           <div class="form-group">
+              <label class="col-xs-3 control-label">手术主刀医生：</label>
+              <div class="col-xs-3">
+                 <input class="form-control easyui-validatebox required" type="text" name="userName" value="" maxlength="20" placeholder="" data-options="required:true,invalidMessage:'请输入用户名'" />
+              </div>
+              <label class="col-xs-2 control-label">手术助手：</label>
+              <div class="col-xs-3">
+                 <input class="form-control easyui-validatebox required" type="text" name="assit" value="" maxlength="20" placeholder="" data-options="required:true,invalidMessage:'请输入手术助手'" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">手术开始时间：</label>
+              <div class="col-xs-3">
+                 <input class="form-control hk_date easyui-validatebox required" type="text" name="QQ" value="" maxlength="20" placeholder="" data-options="required:true" />
+              </div>
+
+              <label class="col-xs-2 control-label">手术结束时间：</label>
+              <div class="col-xs-3">
+                 <input class="form-control hk_date easyui-validatebox required" type="text" name="QQ" value="" maxlength="20" placeholder="" data-options="required:true" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">手术眼别：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control easyui-validatebox required" data-options="required:true,invalidMessage:'请选择'"  name="drop">
+                  <option value="" selected="selected" >请选择...</option>
+                  <option value="1">OD</option>
+                  <option value="2">OS</option>
+                </select>
+              </div>
+              <label class="col-xs-2 control-label">麻醉方式：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control easyui-validatebox required" data-options="required:true,invalidMessage:'请选择'"  name="drop">
+                  <option value="" selected="selected" >请选择...</option>
+                  <option value="1">表面麻醉</option>
+                </select>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">手术住切口位置：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control easyui-validatebox required" data-options="required:true,invalidMessage:'请选择'"  name="drop">
+                  <option value="" selected="selected" >请选择...</option>
+                  <option value="1">上方</option>
+                  <option value="2">下方</option>
+                </select>
+              </div>
+              <label class="col-xs-2 control-label">主切口长度：</label>
+              <div class="col-xs-3">
+                 <input class="form-control easyui-validatebox" type="text" name="mobile" value="" maxlength="20" placeholder="1~6" data-options="required:true" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">主切口起点位置：</label>
+              <div class="col-xs-3">
+                 <input class="form-control easyui-validatebox" type="text" name="mobile" value="" maxlength="20" placeholder="0.01~12.00" data-options="required:true" />
+              </div>
+              <label class="col-xs-2 control-label">终点位置：</label>
+              <div class="col-xs-3">
+                 <input class="form-control easyui-validatebox" type="text" name="mobile" value="" maxlength="20" placeholder="0.01~12.00" data-options="required:true" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">角膜穿刺口位置：</label>
+              <div class="col-xs-3">
+                 <input class="form-control easyui-validatebox" type="text" name="mobile" value="" maxlength="20" placeholder="0.01~12.00" data-options="required:true" />
+              </div>
+              <label class="col-xs-2 control-label">粘弹剂：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control easyui-validatebox required" data-options="required:true,invalidMessage:'请选择'"  name="drop">
+                  <option value="" selected="selected" >请选择...</option>
+                  <option value="1">爱唯</option>
+                </select>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">晶体攀位置：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control easyui-validatebox required" data-options="required:true,invalidMessage:'请选择'"  name="drop">
+                  <option value="" selected="selected" >请选择...</option>
+                  <option value="1">其他</option>
+                </select>
+              </div>
+              <label class="col-xs-2 control-label">术中并发症：</label>
+              <div class="col-xs-3">
+                 <input class="form-control" type="text" name="mobile" value="" maxlength="20" placeholder="" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">ICL型号：</label>
+              <div class="col-xs-3">
+                 <input class="form-control easyui-validatebox" type="text" name="mobile" value="" maxlength="20" placeholder="0.01~12.00" data-options="required:true" />
+              </div>
+              <label class="col-xs-2 control-label">术中用药：</label>
+              <div class="col-xs-3">
+                 <input class="form-control" type="text" name="mobile" value="" maxlength="20" placeholder="" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">术中特殊情况：</label>
+              <div class="col-xs-3">
+                 <input class="form-control" type="text" name="mobile" value="" maxlength="20" placeholder="" />
+              </div>
+           </div>
+
+        </fieldset>
+
+        <p class="pad-t10 center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="reset" class="btn btn-warning btn-formS btn-cancel" name="btnCancel" value="重 置" />
+        </p>
+    </form>
+</div>
+
+
+
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

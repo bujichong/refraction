@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>欢迎使用爱尔医院筹建管理系统</title>
+<meta charset="utf-8">
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/index.css" />
+</head>
+<body data-js="index:init">
+<div class="wrapper">
+  <!-- header -->
+  <div class="header">
+    <h1 class="h1-logo"><img src="images/logo.png" height="36" width="390" alt="爱尔眼科基础平台管理系统" /></h1>
+    <div class="userInfo">
+       <span class="s-welcome">欢迎你，<em class="em-userName">系统管理员</em>！</span><span class="s-date">2016-11-22</span>
+       <a class="a-loginOut" href="/login.html">退出</a>
+      </div>
+  </div>
+
+
+  <!-- sidebar -->
+  <div class="sidebar"><!-- 左侧菜单导航 -->
+    <h2 class="h2-sideHead"><span class="s-title">管理菜单</span><!-- <a href="manage.html" class="a-sideto a-side-toManage">系统管理</a> --></h2><span class="s-extendSide">折叠</span>
+    <div class="sidenav">
+      <ul class="ul-sidenav">
+        <li class="li-sidenav li-sidenav-now"><span class="s-sidenav" rel="home.html"><em class="em-icon">&#xe629;</em>系统首页</span></li>
+        <li class="li-sidenav"><span class="s-sidenav"><em class="em-icon">&#xe632;</em>系统管理</span>
+            <ul class="ul-subnav">
+              <li class="li-subnav"><span class="s-subnav" rel="baseset.html">基础设置</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="upload.html">上传文件</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="users.html">用户管理</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="role.html">角色管理</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="group.html">组织管理</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="module.html">模块管理</span></li>
+              <!-- <li class="li-subnav"><span class="s-subnav" rel="/powers.html">权限管理</span></li> -->
+              <li class="li-subnav"><span class="s-subnav" rel="dictionary.html">数据字典</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="log.html">日志管理</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="404.html">404</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="500.html">500</span></li>
+            </ul>
+        </li>
+        <li class="li-sidenav"><span class="s-sidenav"><em class="em-icon">&#xe601;</em>医院管理</span>
+            <ul class="ul-subnav">
+              <li class="li-subnav"><span class="s-subnav" rel="404.html">医院信息</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="404.html">备忘录</span></li>
+            </ul>
+        </li>
+        <li class="li-sidenav"><span class="s-sidenav"><em class="em-icon">&#xe608;</em>统计管理</span>
+            <ul class="ul-subnav">
+              <li class="li-subnav"><span class="s-subnav" rel="404.html">医院统计</span></li>
+              <li class="li-subnav"><span class="s-subnav" rel="404.html">工作统计</span></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <div class="extendSide"></div> -->
+  <div class="mainCont"><!-- 右侧正文区域 -->
+    <!-- <div class="iframeBox"><iframe id="mainIframe" src="home.html" frameborder="0" height="100%" width="100%" scrolling="auto"></iframe></div> -->
+    <div id="tabs" class="easyui-tabs" fit="true" border="false" plain="true" width="100%">
+        <div title="系统首页" class="content-doc">
+          <iframe id="mainIframe" src="home.html" frameborder="0" height="100%" width="100%" scrolling="auto"></iframe>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="none">
+<div id="sys_chgPwd">
+    <p class="p-item">
+      <label class="lab-item">旧  密    码：</label><input name="oldPwd" type="password" class="txt"/>
+    </p>
+    <p class="p-item">
+      <label class="lab-item">设置新密码：</label><input name="newPwd" type="password" class="txt"/>
+    </p>
+    <p class="p-item">
+      <label class="lab-item">重复新密码：</label><input name="repPwd" type="password" class="txt"/>
+    </p>
+  </div>
+</div> -->
+
+<!-- mainTab rightMenu -->
+<div id="mm" class="easyui-menu" style="width:150px;">
+  <div id="refresh">刷新</div>
+  <div class="menu-sep"></div>
+  <div id="close">关闭</div>
+  <div id="closeall">全部关闭</div>
+  <div id="closeother">除此之外全部关闭</div>
+<!--   <div class="menu-sep"></div>
+  <div id="closeright">当前页右侧全部关闭</div>
+  <div id="closeleft">当前页左侧全部关闭</div>
+  <div class="menu-sep"></div>
+  <div id="exit">退出</div> -->
+</div>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/lib/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/layer/layer.min.js"></script>
+<script type="text/javascript" src="js/index2.js"></script>
+</body>
+</html>

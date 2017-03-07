@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>眼部一般检查- 屈光病历数据系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body>
+
+<div class="wrapper-iframeForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <!-- <form class="soForm hk_form pad-t15"> -->
+<form class="form-horizontal formA hk_form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+
+       <div class="form-group">
+          <label class="col-xs-3 control-label">视力表种类：</label>
+          <div class="col-xs-3">
+                <select class="drop form-control needinput" name="drop">
+                  <option value="1" selected="selected">国际视力表</option>
+                </select>
+          </div>
+       </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">裸眼远视力<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                 <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">近视力<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3 form-inline">
+                <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> CM
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3 form-inline">
+                <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> CM
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">戴镜远视力<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                 <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">Schirmer(mm)<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~50" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~50" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">BUT(秒)<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~20" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~20" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">眼睑<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">未见异常</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label needinput"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control" name="drop">
+                <option value="1" selected="selected">未见异常</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">角膜<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">透明</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">透明</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">前房裂隙灯深度<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">正常</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">正常</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">裂隙灯房水<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">清</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">清</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">虹膜<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">纹理清</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">纹理清</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">虹膜备注<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">瞳孔<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">圆</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">圆</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">瞳孔备注<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">晶状体<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">透明</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">透明</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">玻璃体<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">透明</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">透明</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">视乳头边界<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">清</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">清</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">萎缩斑<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">无</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">无</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">眼底颜色<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">正常</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">正常</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">C/D值<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">0.3</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">0.3</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">中心凹反光<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">正常</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">正常</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">视网膜平复<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">平复</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="1" selected="selected">平复</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">视网膜备注<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">其他<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+         </div>
+
+        <p class="pad-t10 center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="reset" class="btn btn-warning btn-formS btn-cancel" name="btnCancel" value="重 置" />
+        </p>
+    </form>
+</div>
+
+
+
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

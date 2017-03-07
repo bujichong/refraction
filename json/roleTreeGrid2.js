@@ -1,0 +1,74 @@
+[{
+  "id":1,
+  "pid":0,
+  "name":"根模块"
+},{
+  "id":2,
+  "pid":1,
+  "name":"系统管理"
+},{
+  "id":21,
+  "pid":2,
+  "name":"用户管理",
+  "power": [
+      {"id":211,"text":"增加","state":true},
+      {"id":212,"text":"修改","state":true},
+      {"id":213,"text":"删除","state":true},
+      {"id":214,"text":"重置密码","state":true},
+      {"id":215,"text":"更新状态","state":true},
+      {"id":216,"text":"设置权限","state":true}
+    ]
+},{
+  "id":22,
+  "pid":2,
+  "name":"角色管理",
+  "power": [
+      {"id":221,"text":"查看","state":true},
+      {"id":222,"text":"增加","state":true},
+      {"id":223,"text":"修改","state":true},
+      {"id":224,"text":"删除","state":true},
+      {"id":225,"text":"设置权限","state":true}
+    ]
+},{
+  "id":23,
+  "pid":2,
+  "name":"模块管理",
+  "power": [
+      {"id":231,"text":"查看","state":true},
+      {"id":232,"text":"增加","state":true},
+      {"id":233,"text":"修改","state":true},
+      {"id":234,"text":"删除","state":true}
+    ]
+},{
+  "id":24,
+  "pid":2,
+  "name":"日志管理",
+  "power": [
+      {"id":241,"text":"查看","state":true},
+      {"id":242,"text":"删除","state":true}
+    ]
+},{
+  "id":3,
+  "pid":1,
+  "name":"功能管理"
+},{
+  "id":31,
+  "pid":3,
+  "name":"功能1",
+  "power": [
+      {"id":311,"text":"查看","state":true},
+      {"id":312,"text":"增加","state":true},
+      {"id":313,"text":"修改","state":true},
+      {"id":314,"text":"删除","state":true}
+    ]
+},{
+  "id":32,
+  "pid":3,
+  "name":"功能2",
+  "power": [
+      {"id":321,"text":"查看","state":true},
+      {"id":322,"text":"增加","state":true},
+      {"id":323,"text":"修改","state":true},
+      {"id":324,"text":"删除","state":true}
+    ]
+}]

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>患者基本信息- 屈光病历数据系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body data-js="userForm:baseInfo">
+
+<div class="wrapper-iframeForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <!-- <form class="soForm hk_form pad-t15"> -->
+<form class="form-horizontal formA hk_form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+
+        <fieldset>
+           <div class="form-group">
+              <label class="col-xs-3 control-label">姓名(中文)：</label>
+              <div class="col-xs-3">
+                 <input class="form-control needinput" id="userName" type="text" name="userName" value="" maxlength="20" placeholder="姓名" />
+              </div>
+              <label class="col-xs-2 control-label">国籍：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control" name="drop">
+                  <option value="1" >Z中国大陆</option>
+                  <option value="2" >Z中国香港</option>
+                  <option value="3" >Z中国澳门</option>
+                  <option value="4" >Z中国台湾地区</option>
+                  <option value="12" >M马来西亚</option>
+                  <option value="11" >X新加坡</option>
+                  <option value="6" >R日本</option>
+                  <option value="5" >H韩国</option>
+                  <option value="7" >M美国</option>
+                  <option value="8" >J加拿大</option>
+                  <option value="10" >A澳大利亚</option>
+                  <option value="21" >X新西兰</option>
+                  <option value="75" >A阿尔巴尼亚</option>
+                  <option value="26" >A阿根廷</option>
+                  <option value="25" >A阿联酋</option>
+                  <option value="143" >A阿曼</option>
+                  <option value="78" >A阿塞拜疆</option>
+                  <option value="44" >A爱尔兰</option>
+                  <option value="39" >A埃及</option>
+                  <option value="38" >A爱沙尼亚</option>
+                  <option value="77" >A安哥拉</option>
+                  <option value="27" >A奥地利</option>
+                  <option value="144" >B巴布亚新几内亚</option>
+                  <option value="31" >B巴哈马</option>
+                  <option value="147" >B巴勒斯坦</option>
+                  <option value="82" >B巴林</option>
+                  <option value="59" >B巴拿马</option>
+                  <option value="30" >B巴西</option>
+                  <option value="32" >B白俄罗斯</option>
+                  <option value="29" >B保加利亚</option>
+                  <option value="84" >B贝宁</option>
+                  <option value="28" >B比利时</option>
+                  <option value="61" >B波兰</option>
+                  <option value="86" >B玻利维亚</option>
+                  <option value="33" >B伯利兹</option>
+                  <option value="81" >B布基纳法索</option>
+                  <option value="109" >C赤道几内亚</option>
+                  <option value="37" >D丹麦</option>
+                  <option value="17" >D德国</option>
+                  <option value="161" >D多哥</option>
+                  <option value="20" >E俄罗斯</option>
+                  <option value="19" >F法国</option>
+                  <option value="15" >F菲律宾</option>
+                  <option value="41" >F芬兰</option>
+                  <option value="95" >F佛得角</option>
+                  <option value="107" >G冈比亚</option>
+                  <option value="104" >G格林纳达</option>
+                  <option value="105" >G格鲁吉亚</option>
+                  <option value="36" >G哥伦比亚</option>
+                  <option value="93" >G哥斯达黎加</option>
+                  <option value="112" >G圭亚那</option>
+                  <option value="22" >H荷兰</option>
+                  <option value="113" >H洪都拉斯</option>
+                  <option value="99" >J吉布提</option>
+                  <option value="48" >J吉尔吉斯斯坦</option>
+                  <option value="108" >J几内亚</option>
+                  <option value="111" >J几内亚比绍</option>
+                  <option value="103" >J加蓬</option>
+                  <option value="49" >J柬埔寨</option>
+                  <option value="173" >J津巴布韦</option>
+                  <option value="92" >K喀麦隆</option>
+                  <option value="63" >K卡塔尔</option>
+                  <option value="121" >K开曼群岛</option>
+                  <option value="114" >K克罗地亚</option>
+                  <option value="119" >K科摩罗</option>
+                  <option value="120" >K科威特</option>
+                  <option value="118" >K肯尼亚</option>
+                  <option value="127" >L拉脱维亚</option>
+                  <option value="126" >L莱索托</option>
+                  <option value="51" >L立陶宛</option>
+                  <option value="52" >L卢森堡</option>
+                  <option value="148" >L卢旺达</option>
+                  <option value="64" >L罗马尼亚</option>
+                  <option value="132" >M马达加斯加</option>
+                  <option value="55" >M马尔代夫</option>
+                  <option value="138" >M马拉维</option>
+                  <option value="134" >M马里</option>
+                  <option value="137" >M毛里求斯</option>
+                  <option value="136" >M毛里塔尼亚</option>
+                  <option value="54" >M蒙古</option>
+                  <option value="60" >M秘鲁</option>
+                  <option value="129" >M摩尔多瓦</option>
+                  <option value="53" >M摩洛哥</option>
+                  <option value="139" >M莫桑比克</option>
+                  <option value="56" >M墨西哥</option>
+                  <option value="140" >N纳米比亚</option>
+                  <option value="72" >N南非</option>
+                  <option value="142" >N尼加拉瓜</option>
+                  <option value="141" >N尼日尔</option>
+                  <option value="57" >N尼日利亚</option>
+                  <option value="58" >N挪威</option>
+                  <option value="62" >P葡萄牙</option>
+                  <option value="23" >R瑞典</option>
+                  <option value="34" >R瑞士</option>
+                  <option value="157" >S萨尔瓦多</option>
+                  <option value="65" >S塞尔维亚</option>
+                  <option value="152" >S塞拉利昂</option>
+                  <option value="153" >S塞内加尔</option>
+                  <option value="97" >S塞浦路斯</option>
+                  <option value="67" >S塞舌尔</option>
+                  <option value="66" >S沙特阿拉伯</option>
+                  <option value="50" >S斯里兰卡</option>
+                  <option value="151" >S斯洛伐克</option>
+                  <option value="150" >S斯洛文尼亚</option>
+                  <option value="159" >S斯威士兰</option>
+                  <option value="155" >S苏里南</option>
+                  <option value="162" >T塔吉克斯坦</option>
+                  <option value="13" >T泰国</option>
+                  <option value="165" >T坦桑尼亚</option>
+                  <option value="164" >T特立尼达和多巴哥</option>
+                  <option value="69" >T土耳其</option>
+                  <option value="163" >T土库曼斯坦</option>
+                  <option value="68" >T突尼斯</option>
+                  <option value="110" >W危地马拉</option>
+                  <option value="70" >W委内瑞拉</option>
+                  <option value="85" >W文莱</option>
+                  <option value="166" >W乌干达</option>
+                  <option value="24" >W乌克兰</option>
+                  <option value="167" >W乌拉圭</option>
+                  <option value="168" >W乌兹别克斯坦</option>
+                  <option value="40" >X西班牙</option>
+                  <option value="42" >X希腊</option>
+                  <option value="43" >X匈牙利</option>
+                  <option value="117" >Y牙买加</option>
+                  <option value="171" >Y也门</option>
+                  <option value="18" >Y意大利</option>
+                  <option value="45" >Y以色列</option>
+                  <option value="46" >Y印度</option>
+                  <option value="16" >Y印度尼西亚</option>
+                  <option value="9" >Y英国</option>
+                  <option value="71" >Y英属维尔京群岛</option>
+                  <option value="47" >Y约旦</option>
+                  <option value="14" >Y越南</option>
+                  <option value="172" >Z赞比亚</option>
+                  <option value="160" >Z乍得</option>
+                  <option value="35" >Z智利</option>
+                </select>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">姓名(拼音、英文)：</label>
+              <div class="col-xs-3">
+                 <input class="form-control needinput"  id="namePinyin" type="text" name="text" value="" maxlength="20" placeholder="" data-options="invalidMessage:'请输入英文名'" />
+              </div>
+              <label class="col-xs-2 control-label">移动电话一：</label>
+              <div class="col-xs-3">
+                 <input class="form-control needinput isMobile" type="text" name="mobile" value="" maxlength="20" placeholder="请输入移动电话" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">证件种类：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control needinput" name="drop">
+                  <option value="1" selected="selected">身份证</option>
+                  <option value="2">护照</option>
+                </select>
+              </div>
+              <label class="col-xs-2 control-label">移动电话二：</label>
+              <div class="col-xs-3">
+                 <input class="form-control isMobile" type="text" name="mobile" value="" maxlength="20" placeholder="请输入移动电话" data-options="validType:'mobile',invalidMessage:'请输入正确的手机号', missingMessage:'请输入移动电话'" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">证件号码：</label>
+              <div class="col-xs-3">
+                 <input id="IdCardNo" class="form-control needinput {isIdCardNo:'birthday,sex,age'}" type="text" name="cardNO" value="" maxlength="18" placeholder="证件号码" />
+              </div>
+              <label class="col-xs-2 control-label">性别：</label>
+              <div class="col-xs-3">
+                <select id="sex" class="drop form-control needinput" name="sex">
+                  <option value="" selected="selected" >请选择...</option>
+                  <option value="male">男</option>
+                  <option value="female">女</option>
+                  <option value="unknow">未知</option>
+                </select>
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">出生日期：</label>
+              <div class="col-xs-3">
+                 <input id="birthday" class="form-control hk_date txt_requireDate" type="text" name="birthday" value="" maxlength="20" placeholder="出生日期" />
+              </div>
+              <label class="col-xs-2 control-label">年龄：</label>
+              <div class="col-xs-3">
+                 <input id="age" class="form-control needinput isAge" type="text" name="age" value="" maxlength="20" placeholder="年龄" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">固定电话区号：</label>
+              <div class="col-xs-3">
+                 <input class="form-control isPhoneArea" type="text" name="areaCode" value="" maxlength="20" placeholder="固定电话区号" />
+              </div>
+              <label class="col-xs-2 control-label">固定电话号码：</label>
+              <div class="col-xs-3">
+                 <input class="form-control isPhoneNumber" type="text" name="phone" value="" maxlength="30" placeholder="固定电话号码" />
+              </div>
+           </div>
+
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">电子邮件：</label>
+              <div class="col-xs-3">
+                 <input class="form-control email" type="text" name="email" value="" maxlength="30" placeholder="" />
+              </div>
+              <label class="col-xs-2 control-label">QQ号：</label>
+              <div class="col-xs-3">
+                 <input class="form-control isQq" type="text" name="qq" value="" maxlength="15" placeholder="" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">职业：</label>
+              <div class="col-xs-3">
+                <select class="drop form-control needinput" name="drop">
+                  <option value="1" selected="selected">请选择</option>
+                  <option value="2">a职业</option>
+                  <option value="3">b职业</option>
+                  <option value="4">c职业</option>
+                  <option value="5">d职业</option>
+                </select>
+              </div>
+              <label class="col-xs-2 control-label">其他联络方式：</label>
+              <div class="col-xs-3">
+                 <input class="form-control" type="text" name="otherContact" value="" maxlength="20" placeholder="" />
+              </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">初诊日期：</label>
+              <div class="col-xs-3">
+                 <input class="form-control hk_date txt_requireDate" type="text" name="date" value="" maxlength="20" placeholder="初诊日期" data-opt="{maxDate:'%y-%M-%d'}" />
+              </div>
+              <label class="col-xs-2 control-label">通讯地址：</label>
+              <div class="col-xs-3">
+                <textarea class="txta form-control" name="address"  maxlength="200" ></textarea>
+              </div>
+
+        </fieldset>
+
+        <p class="pad-t10 center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="reset" class="btn btn-warning btn-formS btn-cancel" name="btnCancel" value="重 置" />
+        </p>
+    </form>
+</div>
+</div>
+
+
+
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

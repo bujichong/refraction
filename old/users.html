@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>用户管理 - 爱尔医院筹建管理系统</title>
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+<body data-js="sys:users">
+
+<div class="wrapper">
+
+  <h2 class="h2-pageTitle">用户管理</h2>
+
+  <div class="searchHead">
+    <form id="sbox" class="form-inline">
+        <select name="filedType" class="form-control">
+          <option value="userName">用户名</option>
+          <option value="realName">真实姓名</option>
+          <option value="orgName">部门</option>
+          <option value="mobile">手机号</option>
+          <option value="weChat">微信</option>
+          <option value="QQ">QQ</option>
+          <option value="realName">Email</option>
+        </select>
+        <div class="form-group"><input type="text" class="form-control" name="key" placeholder="关键词"></div>
+        <!-- <div class="form-group"><input type="text" class="form-control hk_date" name="startDate" placeholder="创建时间-起"></div> - <div class="form-group"><input type="text" class="form-control hk_date" name="endDate" placeholder="创建时间-止"></div> -->
+        <button type="button" class="btn btn-info hk_search"  data-opt="{grid:'#gridBox',scope:'#sbox'}">查 询</button>
+    </form>
+  </div>
+
+  <div class="gridWrap">
+    <div id="gridBox"></div>
+  </div>
+
+
+
+</div>
+
+<script src="js/require.js" data-main="js/main.un"></script>
+
+</body>
+</html>

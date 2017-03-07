@@ -1,0 +1,1 @@
+{"rows":[{"id":"1","name":"湘潭爱尔眼科医院","role":"管理部门","desc":"暂无","parentGroup":"爱尔总部"},{"id":"2","name":"湘潭爱尔眼科医院","role":"管理部门","desc":"暂无","parentGroup":"爱尔总部"},{"id":"2","name":"湘潭爱尔眼科医院","role":"管理部门","desc":"暂无","parentGroup":"爱尔总部"},{"id":"2","name":"湘潭爱尔眼科医院","role":"管理部门","desc":"暂无","parentGroup":"爱尔总部"}],"total":15}

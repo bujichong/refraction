@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>用户角色分配 - 爱尔医院筹建管理系统</title>
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body data-js="sys:userRole">
+<div class="wrapper-popForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <form class="form-horizontal hk_form pad-t15 pad-r30" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+        <div class="h250 overauto pad-t20 pad-l20 mar-l30 bgc-f3 bor-rad-2">
+            <ul id="ul-roleTree" class="ul-userTree"></ul>
+        </div>
+        <input id="roleId" type="hidden" class="txt" name="roleId" />
+
+        <p class="pad-t20 center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="button" class="btn btn-default btn-formS btn-cancel" name="btnCancel" value="取 消" />
+        </p>
+    </form>
+</div>
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

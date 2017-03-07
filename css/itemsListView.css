@@ -1,0 +1,29 @@
+.itemsSideHead{position: absolute;top:35px;left:0;width:75px;height:80px;font-weight: bold;border-right: 1px solid #e1e1e1;}
+.itemsSideBox{position: absolute;top:115px;left:0;width:75px;bottom:0;font-weight: bold;border-right: 1px solid #e1e1e1;overflow: hidden;}
+.itemsHeadBox{position: absolute;top:35px;left:76px;right:0;height:100px;font-weight: bold;overflow: hidden;}
+.itemsListBox{position: absolute;top:115px;right:0;left:76px;bottom:0;overflow: auto;}
+
+.itemsColHead{height:80px;line-height:80px;background-color:#00A0E9;color:#fff;text-align: center;}
+
+.ul-itemsSide{position: relative;height:10000px;}
+.ul-colHead{position: relative;width:10000px;}
+.itemsListScroll{position: relative;width:10000px;}
+.itemsListScroll{width:1800px;}
+
+.li-itemSide{text-align: center;height:99px;border-bottom:1px solid #e1e1e1;}
+.s-itemT{display: block;padding:15px 5px 0;}
+.li-colMonth{float: left;width:600px;text-align: center;}
+.p-month{background-color:#00A0E9;border-right:1px solid #e1e1e1;color:#fff;height:40px;line-height: 40px;font-weight: bold;font-size: 14px;}
+.ul-colWeeks{overflow: hidden;zoom: 1;}
+.li-weeks{float: left;width:149px;height:39px;line-height: 39px;background-color:#78D624;color:#fff;border-right:1px solid #fff;border-top:1px solid #fff;}
+
+.itemsRow{overflow: hidden;zoom: 1;}
+
+.colCont{float: left;width:149px;/*height:99px;*/border-right: 1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;overflow: hidden;zoom: 1;}
+.p-col{line-height:20px;padding:6px;border-bottom:1px dotted #e1e1e1;}
+.p-newItem{padding-left:35px;background:url(../images/i-new-a.png) no-repeat 6px 1px;}
+
+.row-odd .p-col{border-bottom:1px solid #d9d9d9;}
+.p-col-last,.row-odd .p-col-last{border-bottom:0px;}
+
+.row-odd{background-color: #edeaea;}

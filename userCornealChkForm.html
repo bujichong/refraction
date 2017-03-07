@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>角膜术后复查 - 屈光病历数据系统</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" media="all" href="js/lib/easyui/themes/gray/easyui.css" />
+<link type="text/css" rel="stylesheet" href="css/newbase.css" />
+</head>
+
+<body>
+
+<div class="wrapper-iframeForm">
+    <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
+    <!-- <form class="soForm hk_form pad-t15"> -->
+<form class="form-horizontal formA easy-form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+
+
+         <div class="form-group mar-b0">
+            <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-xs-6 control-label">复查日期：</label>
+                <div class="col-xs-6">
+                    <input class="form-control hk_date" type="text" name="du" value="" maxlength="20" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-xs-6 control-label">视力表类型：</label>
+                <div class="col-xs-6">
+                  <select class="drop form-control" name="drop">
+                    <option value="" selected="selected">国际视力表</option>
+                  </select>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+              <label class="col-xs-4 control-label">主诉：</label>
+              <div class="col-xs-6">
+                  <textarea class="txta form-control" name="address"  maxlength="200" ></textarea>
+              </div>
+            </div>
+         </div>
+
+
+        <h4 class="h4-form"><span class="s-t">裸眼视力</span></h4>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">裸眼远视力<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">裸眼近视力<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3 form-inline">
+                <input class="form-control wp40" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40" type="text" name="du" value="40" maxlength="20" placeholder="" /> CM
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3 form-inline">
+                <input class="form-control wp40" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40" type="text" name="du" value="40" maxlength="20" placeholder="" /> CM
+            </div>
+         </div>
+
+
+        <h4 class="h4-form"><span class="s-t">电脑验光</span></h4>
+        <fieldset>
+
+           <div class="form-group">
+            <div class="col-xs-6 form-inline">
+              <label class="control-label"><em class="em-og">(OD)</em>球</label>
+              <div class="input-group input-group-a">
+                <span class="input-group-addon">-</span>
+                 <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+              </div>
+
+              <label class="control-label">D柱</label>
+              <div class="input-group input-group-b">
+                <span class="input-group-addon">-</span>
+                 <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+              </div>
+
+              <label class="control-label">D<em class="em-bl">X</em>轴</label>
+              <div class="input-group input-group-c">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+              </div>°
+            </div>
+
+            <div class="col-xs-6 form-inline">
+              <label class="control-label"><em class="em-og">(OS)</em>球</label>
+              <div class="input-group input-group-a">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+            </div>
+
+              <label class="control-label">D柱</label>
+              <div class="input-group input-group-b">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+            </div>
+
+              <label class="control-label">D<em class="em-bl">X</em>轴</label>
+              <div class="input-group input-group-c">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+              </div>°
+            </div>
+           </div>
+        </fieldset>
+
+
+        <h4 class="h4-form"><span class="s-t">综合验光</span></h4>
+        <fieldset>
+
+           <div class="form-group">
+            <div class="col-xs-6 form-inline">
+              <label class="control-label"><em class="em-og">(OD)</em>球</label>
+              <div class="input-group input-group-a">
+                <span class="input-group-addon">-</span>
+                 <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+              </div>
+
+              <label class="control-label">D柱</label>
+              <div class="input-group input-group-b">
+                <span class="input-group-addon">-</span>
+                 <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+              </div>
+
+              <label class="control-label">D<em class="em-bl">X</em>轴</label>
+              <div class="input-group input-group-c">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+              </div>°
+            </div>
+
+            <div class="col-xs-6 form-inline">
+              <label class="control-label"><em class="em-og">(OS)</em>球</label>
+              <div class="input-group input-group-a">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+            </div>
+
+              <label class="control-label">D柱</label>
+              <div class="input-group input-group-b">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+            </div>
+
+              <label class="control-label">D<em class="em-bl">X</em>轴</label>
+              <div class="input-group input-group-c">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+              </div>°
+            </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">矫正视力<em class="em-og">(OD)</em>：</label>
+              <div class="col-xs-3">
+                  <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+              </div>
+              <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+              <div class="col-xs-3">
+                   <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+              </div>
+           </div>
+
+        </fieldset>
+
+
+        <h4 class="h4-form"><span class="s-t">散瞳验光</span></h4>
+        <fieldset>
+
+           <div class="form-group">
+            <div class="col-xs-6 form-inline">
+              <label class="control-label"><em class="em-og">(OD)</em>球</label>
+              <div class="input-group input-group-a">
+                <span class="input-group-addon">-</span>
+                 <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+              </div>
+
+              <label class="control-label">D柱</label>
+              <div class="input-group input-group-b">
+                <span class="input-group-addon">-</span>
+                 <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+              </div>
+
+              <label class="control-label">D<em class="em-bl">X</em>轴</label>
+              <div class="input-group input-group-c">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+              </div>°
+            </div>
+
+            <div class="col-xs-6 form-inline">
+              <label class="control-label"><em class="em-og">(OS)</em>球</label>
+              <div class="input-group input-group-a">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+            </div>
+
+              <label class="control-label">D柱</label>
+              <div class="input-group input-group-b">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+            </div>
+
+              <label class="control-label">D<em class="em-bl">X</em>轴</label>
+              <div class="input-group input-group-c">
+              <span class="input-group-addon">-</span>
+               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+              </div>°
+            </div>
+           </div>
+
+           <div class="form-group">
+              <label class="col-xs-3 control-label">矫正视力<em class="em-og">(OD)</em>：</label>
+              <div class="col-xs-3">
+                  <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+              </div>
+              <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+              <div class="col-xs-3">
+                   <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+              </div>
+           </div>
+
+        </fieldset>
+
+
+
+        <h4 class="h4-form"><span class="s-t">其他</span></h4>
+        <fieldset>
+         <div class="form-group">
+            <label class="col-xs-3 control-label">角膜情况<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">眼压测量方法<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control" name="drop">
+                <option value="1" selected="selected">NCT</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control" name="drop">
+                <option value="1" selected="selected">NCT</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">眼压<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">并发症<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control" name="drop">
+                <option value="1" selected="selected">无</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control" name="drop">
+                <option value="1" selected="selected">无</option>
+              </select>
+            </div>
+         </div>
+
+        </fieldset>
+
+        <p class="pad-t10 center">
+          <input type="submit" class="btn btn-info btn-formS btn-submit" name="btnSubmit" value="保 存" />
+          <input type="reset" class="btn btn-warning btn-formS btn-cancel" name="btnCancel" value="重 置" />
+        </p>
+    </form>
+</div>
+
+
+
+<script src="js/require.js" data-main="js/main.un"></script>
+</body>
+
+</html>

@@ -1267,7 +1267,7 @@ border-bottom:1px solid #00A0E9;
 .datagrid-view {
   position: relative;
   overflow: hidden;
-  /*border-top:2px solid #6fbcfd;*/
+  border-top:2px solid #6fbcfd;
 /*  border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;*/
 }
@@ -1343,11 +1343,11 @@ border-bottom:1px solid #00A0E9;
 }
 .datagrid-header-row{height:32px;}
 .datagrid-row{height: 32px;background-color: #fff;}
-.datagrid-header-inner{background-color:#B4DCE4;font-weight: bold;}
+.datagrid-header-inner{background-color:#f1f7f9;font-weight: bold;}
 .datagrid-header td,
 .datagrid-body td,
 .datagrid-footer td {
-  border-width: 0 1px 1px 0;
+  border-width: 0 0 1px 0;
   border-style: dotted;
   margin: 0;
   padding: 0;
@@ -1362,8 +1362,8 @@ border-bottom:1px solid #00A0E9;
   white-space: nowrap;
   word-wrap: normal;
   overflow: hidden;
-  height: 36px!important;
-  line-height: 36px!important;
+  height: 32px!important;
+  line-height: 32px!important;
   font-size: 12px;
 }
 .datagrid-header .datagrid-cell {
@@ -1523,7 +1523,7 @@ border-bottom:1px solid #00A0E9;
   border-color: #e3e3e3;
 }
 
-.datagrid-header,.datagrid-header td{border-color:#f9f9f9;border-style:solid;}
+.datagrid-header td{border-color:#BCCBDF;}
 .datagrid-htable,
 .datagrid-btable,
 .datagrid-ftable {
@@ -1540,7 +1540,7 @@ border-bottom:1px solid #00A0E9;
   cursor: default;
 }
 /*.datagrid-row-over td{border-bottom:1px solid #fff;}*/
-.datagrid-header td.datagrid-header-over {background: #bfe5ec;}
+.datagrid-header td.datagrid-header-over {background: #C9DBE9;}
 .datagrid-row-selected {
   /*background: #B3D3FF;*/
   /*background: #ffdc99;*/
@@ -2792,12 +2792,13 @@ border-bottom:1px solid #00A0E9;
   margin: -12px 0 0 -6px;
 }
 .tooltip {
-  background-color: #ffffff;
-  border-color: #D3D3D3;
+  background-color: #fdf7db;
+  border-color: #fbd396;
   color: #000000;
 }
+.tooltip-arrow{border-right-color:#fdf7db!important;}
 .tooltip-right .tooltip-arrow-outer {
-  border-right-color: #D3D3D3;
+  border-right-color: #fbd396!important;
 }
 .tooltip-right .tooltip-arrow {
   border-right-color: #ffffff;

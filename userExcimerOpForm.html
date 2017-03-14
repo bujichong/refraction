@@ -18,30 +18,48 @@
 <div class="wrapper-iframeForm">
     <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
     <!-- <form class="soForm hk_form pad-t15"> -->
-<form class="form-horizontal formA easy-form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+<form class="form-horizontal formA hk_form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
 
          <div class="form-group">
-            <label class="col-xs-3 control-label">手术日期：</label>
+            <label class="col-xs-3 control-label">手术医生：</label>
+            <div class="col-xs-3">
+                 <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="" />
+            </div>
+            <label class="col-xs-2 control-label">手术日期：</label>
             <div class="col-xs-3">
                 <input class="form-control hk_date" type="text" name="du" value="" maxlength="20" placeholder="" />
-            </div>
-            <label class="col-xs-2 control-label">手术医生：</label>
-            <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">制瓣方法<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
-                <option value="1" selected="selected">Moria,</option>
+              <select class="drop form-control needinput" name="drop">
+                <!-- <option value="" selected="selected">请选择</option> -->
+                <option value="1" selected="selected">Moria</option>
+                <option value="2">Hansatome</option>
+                <option value="3">Amadeus</option>
+                <option value="4">MK-2000</option>
+                <option value="5">Intralase 60</option>
+                <option value="6">Intralase 150</option>
+                <option value="7">FS200</option>
+                <option value="8">LDV</option>
+                <option value="9">VisuMax</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
-                <option value="1" selected="selected">Moria,</option>
+              <select class="drop form-control needinput" name="drop">
+                <!-- <option value="" selected="selected">请选择</option> -->
+                <option value="1" selected="selected">Moria</option>
+                <option value="2">Hansatome</option>
+                <option value="3">Amadeus</option>
+                <option value="4">MK-2000</option>
+                <option value="5">Intralase 60</option>
+                <option value="6">Intralase 150</option>
+                <option value="7">FS200</option>
+                <option value="8">LDV</option>
+                <option value="9">VisuMax</option>
               </select>
             </div>
          </div>
@@ -52,25 +70,31 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">角膜瓣厚度(μm)<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="90~180" />
+                 <input class="form-control needinput pInt {range:[90,180]}" type="text" name="du" value="" maxlength="20" placeholder="90~180" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="90~180" />
+                 <input class="form-control needinput pInt {range:[90,180]}" type="text" name="du" value="" maxlength="20" placeholder="90~180" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">角膜蒂位置<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="" selected="selected">请选择...</option>
+                <option value="1">上方</option>
+                <option value="2">鼻侧</option>
+                <option value="3">斜向</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="" selected="selected">请选择...</option>
+                <option value="1">上方</option>
+                <option value="2">鼻侧</option>
+                <option value="3">斜向</option>
               </select>
             </div>
          </div>
@@ -78,25 +102,29 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">角膜蒂宽(mm)<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~6" />
+                 <input class="form-control needinput {range:[0,6],pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="0~6" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~6" />
+                 <input class="form-control needinput {range:[0,6],pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="0~6" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">角膜瓣完整性<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">完整</option>
+                <option value="2">不规则</option>
+                <option value="3">穿孔</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">完整</option>
+                <option value="2">不规则</option>
+                <option value="3">穿孔</option>
               </select>
             </div>
          </div>
@@ -109,36 +137,42 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">上皮刀<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                 <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                 <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">上皮酒精处理时间(秒)<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                 <input class="form-control needinput pInt" type="text" name="du" value="" maxlength="20" placeholder="" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                 <input class="form-control needinput pInt" type="text" name="du" value="" maxlength="20" placeholder="" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">上皮瓣蒂位置<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
-                <option value="" selected="selected">请选择</option>
+              <select class="drop form-control needinput" name="drop">
+                <option value="" selected="selected">请选择...</option>
+                <option value="1">上方</option>
+                <option value="2">鼻侧</option>
+                <option value="3">斜向</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
-                <option value="" selected="selected">请选择</option>
+              <select class="drop form-control needinput" name="drop">
+                <option value="" selected="selected">请选择...</option>
+                <option value="1">上方</option>
+                <option value="2">鼻侧</option>
+                <option value="3">斜向</option>
               </select>
             </div>
          </div>
@@ -146,14 +180,18 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">上皮瓣完整性<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">完整</option>
+                <option value="2">破裂</option>
+                <option value="3">游离</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">完整</option>
+                <option value="2">破裂</option>
+                <option value="3">游离</option>
               </select>
             </div>
          </div>
@@ -170,19 +208,19 @@
               <label class="control-label"><em class="em-og">(OD)</em>球</label>
               <div class="input-group input-group-a">
                 <span class="input-group-addon">-</span>
-                 <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+                 <input class="form-control {range:[0,30],pFloatFix:2}" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
               </div>
 
               <label class="control-label">D柱</label>
               <div class="input-group input-group-b">
                 <span class="input-group-addon">-</span>
-                 <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+                 <input class="form-control {range:[0,10],pFloatFix:2}" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
               </div>
 
               <label class="control-label">D<em class="em-bl">X</em>轴</label>
               <div class="input-group input-group-c">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+               <input class="form-control pInt {range:[1,180]}" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
               </div>°
             </div>
 
@@ -190,19 +228,19 @@
               <label class="control-label"><em class="em-og">(OS)</em>球</label>
               <div class="input-group input-group-a">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+               <input class="form-control {range:[0,30],pFloatFix:2}" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
             </div>
 
               <label class="control-label">D柱</label>
               <div class="input-group input-group-b">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+               <input class="form-control {range:[0,10],pFloatFix:2}" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
             </div>
 
               <label class="control-label">D<em class="em-bl">X</em>轴</label>
               <div class="input-group input-group-c">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+               <input class="form-control pInt {range:[1,180]}" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
               </div>°
             </div>
            </div>
@@ -216,19 +254,19 @@
               <label class="control-label"><em class="em-og">(OD)</em>球</label>
               <div class="input-group input-group-a">
                 <span class="input-group-addon">-</span>
-                 <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+                 <input class="form-control {range:[0,30],pFloatFix:2}" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
               </div>
 
               <label class="control-label">D柱</label>
               <div class="input-group input-group-b">
                 <span class="input-group-addon">-</span>
-                 <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+                 <input class="form-control {range:[0,10],pFloatFix:2}" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
               </div>
 
               <label class="control-label">D<em class="em-bl">X</em>轴</label>
               <div class="input-group input-group-c">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+               <input class="form-control pInt {range:[1,180]}" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
               </div>°
             </div>
 
@@ -236,19 +274,19 @@
               <label class="control-label"><em class="em-og">(OS)</em>球</label>
               <div class="input-group input-group-a">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
+               <input class="form-control {range:[0,30],pFloatFix:2}" type="text" name="qiu" value="" maxlength="20" placeholder="+10~-30" />
             </div>
 
               <label class="control-label">D柱</label>
               <div class="input-group input-group-b">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
+               <input class="form-control {range:[0,10],pFloatFix:2}" type="text" name="zhu" value="" maxlength="20" placeholder="+10~-10" />
             </div>
 
               <label class="control-label">D<em class="em-bl">X</em>轴</label>
               <div class="input-group input-group-c">
               <span class="input-group-addon">-</span>
-               <input class="form-control" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
+               <input class="form-control pInt {range:[1,180]}" type="text" name="zhou" value="" maxlength="20" placeholder="1-180" />
               </div>°
             </div>
            </div>
@@ -262,36 +300,67 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">光学区直径(mm)<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-               <input class="form-control" type="text" name="year" value="" maxlength="20" placeholder="4~8" />
+               <input class="form-control needinput {range:[4,8],pFloatFix:2}" type="text" name="year" value="" maxlength="20" placeholder="4~8" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-               <input class="form-control" type="text" name="day" value="" maxlength="20" placeholder="4~8" />
+               <input class="form-control needinput {range:[4,8],pFloatFix:2}" type="text" name="day" value="" maxlength="20" placeholder="4~8" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">过渡区直径(mm)<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-               <input class="form-control" type="text" name="year" value="" maxlength="20" placeholder="0~3" />
+               <input class="form-control needinput {range:[0,3],pFloatFix:2}" type="text" name="year" value="" maxlength="20" placeholder="0~3" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-               <input class="form-control" type="text" name="day" value="" maxlength="20" placeholder="0~3" />
+               <input class="form-control needinput {range:[0,3],pFloatFix:2}" type="text" name="day" value="" maxlength="20" placeholder="0~3" />
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-xs-3 control-label">准分子激光<em class="em-og">(OD)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="" selected="selected">请选择</option>
+                <option value="1">Amaris500</option>
+                <option value="2">Amaris750</option>
+                <option value="3">Amaris1050</option>
+                <option value="4">Visx S4</option>
+                <option value="5">Wavelight EX500</option>
+                <option value="6">Wavelight</option>
+                <option value="7">B&L</option>
+              </select>
+            </div>
+            <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
+            <div class="col-xs-3">
+              <select class="drop form-control needinput" name="drop">
+                <option value="" selected="selected">请选择</option>
+                <option value="1">Amaris500</option>
+                <option value="2">Amaris750</option>
+                <option value="3">Amaris1050</option>
+                <option value="4">Visx S4</option>
+                <option value="5">Wavelight EX500</option>
+                <option value="6">Wavelight</option>
+                <option value="7">B&L</option>
+              </select>
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">准分子激光程序<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">标准</option>
+                <option value="2">地形图引导</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">标准</option>
+                <option value="2">地形图引导</option>
               </select>
             </div>
          </div>
@@ -299,14 +368,18 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">术中切口出血<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">无</option>
+                <option value="2">少许</option>
+                <option value="3">许多</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">无</option>
+                <option value="2">少许</option>
+                <option value="3">许多</option>
               </select>
             </div>
          </div>
@@ -314,14 +387,18 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">结膜下出血<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">无</option>
+                <option value="2">少许</option>
+                <option value="3">许多</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">无</option>
+                <option value="2">少许</option>
+                <option value="3">许多</option>
               </select>
             </div>
          </div>
@@ -329,14 +406,18 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">角膜上皮情况<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">完整</option>
+                <option value="2">少量松脱</option>
+                <option value="3">大片松脱</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">完整</option>
+                <option value="2">少量松脱</option>
+                <option value="3">大片松脱</option>
               </select>
             </div>
          </div>
@@ -344,14 +425,18 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">角膜瓣情况<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">轻微水肿</option>
+                <option value="3">明显水肿</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">轻微水肿</option>
+                <option value="3">明显水肿</option>
               </select>
             </div>
          </div>
@@ -359,8 +444,10 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">患者配合程度：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">好</option>
+                <option value="2">一般</option>
+                <option value="3">差</option>
               </select>
             </div>
          </div>
@@ -368,14 +455,16 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">术中参数调整与否<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-              <select class="drop form-control" name="drop">
+              <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">否</option>
+                <option value="2">是</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control" name="drop">
                 <option value="1" selected="selected">否</option>
+                <option value="2">是</option>
               </select>
             </div>
          </div>

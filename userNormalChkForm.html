@@ -24,7 +24,9 @@
           <label class="col-xs-3 control-label">视力表种类：</label>
           <div class="col-xs-3">
                 <select class="drop form-control needinput" name="drop">
-                  <option value="1" selected="selected">国际视力表</option>
+                  <option value="1">国际视力表</option>
+                  <option value="2">对数视力表</option>
+                  <option value="3">LogMAR</option>
                 </select>
           </div>
        </div>
@@ -32,55 +34,55 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">裸眼远视力<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+                <input class="form-control needinput {range:[0,2],pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+                 <input class="form-control needinput {range:[0,2],pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">近视力<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3 form-inline">
-                <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> CM
+                <input class="form-control wp40 needinput {pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> CM
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3 form-inline">
-                <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> CM
+                <input class="form-control wp40 needinput {pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="" /> / <input class="form-control wp40 needinput" type="text" name="du" value="" maxlength="20" placeholder="" /> CM
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">戴镜远视力<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+                <input class="form-control needinput {range:[0,2],pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control needinput" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
+                 <input class="form-control needinput {range:[0,2],pFloatFix:2}" type="text" name="du" value="" maxlength="20" placeholder="0~2.0" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">Schirmer(mm)<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~50" />
+                <input class="form-control pInt {range:[0,50]}" type="text" name="du" value="" maxlength="20" placeholder="0~50" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~50" />
+                 <input class="form-control pInt {range:[0,50]}" type="text" name="du" value="" maxlength="20" placeholder="0~50" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">BUT(秒)<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~20" />
+                <input class="form-control pInt {range:[0,20]}" type="text" name="du" value="" maxlength="20" placeholder="0~20" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                 <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="0~20" />
+                 <input class="form-control pInt {range:[0,20]}" type="text" name="du" value="" maxlength="20" placeholder="0~20" />
             </div>
          </div>
 
@@ -89,12 +91,22 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">未见异常</option>
+                <option value="2">内翻</option>
+                <option value="3">外翻</option>
+                <option value="4">倒睫</option>
+                <option value="5">肿物</option>
+                <option value="6">其他</option>
               </select>
             </div>
             <label class="col-xs-2 control-label needinput"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control" name="drop">
                 <option value="1" selected="selected">未见异常</option>
+                <option value="2">内翻</option>
+                <option value="3">外翻</option>
+                <option value="4">倒睫</option>
+                <option value="5">肿物</option>
+                <option value="6">其他</option>
               </select>
             </div>
          </div>
@@ -104,12 +116,22 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">云翳</option>
+                <option value="3">斑翳</option>
+                <option value="4">白斑</option>
+                <option value="5">血管翳</option>
+                <option value="6">其它</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">云翳</option>
+                <option value="3">斑翳</option>
+                <option value="4">白斑</option>
+                <option value="5">血管翳</option>
+                <option value="6">其它</option>
               </select>
             </div>
          </div>
@@ -119,12 +141,16 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">正常</option>
+                <option value="2">深</option>
+                <option value="3">浅</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">正常</option>
+                <option value="2">深</option>
+                <option value="3">浅</option>
               </select>
             </div>
          </div>
@@ -134,12 +160,14 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">清</option>
+                <option value="2">闪光</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">清</option>
+                <option value="2">闪光</option>
               </select>
             </div>
          </div>
@@ -149,12 +177,14 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">纹理清</option>
+                <option value="2">其他</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">纹理清</option>
+                <option value="2">其他</option>
               </select>
             </div>
          </div>
@@ -162,11 +192,11 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">虹膜备注<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
          </div>
 
@@ -175,12 +205,18 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">圆</option>
+                <option value="2">椭圆</option>
+                <option value="3">不规则</option>
+                <option value="4">其它</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">圆</option>
+                <option value="2">椭圆</option>
+                <option value="3">不规则</option>
+                <option value="4">其它</option>
               </select>
             </div>
          </div>
@@ -188,11 +224,11 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">瞳孔备注<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
          </div>
 
@@ -201,12 +237,14 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">浑浊</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">浑浊</option>
               </select>
             </div>
          </div>
@@ -216,12 +254,14 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">浑浊</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">透明</option>
+                <option value="2">浑浊</option>
               </select>
             </div>
          </div>
@@ -231,12 +271,14 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">清</option>
+                <option value="2">欠清</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">清</option>
+                <option value="2">欠清</option>
               </select>
             </div>
          </div>
@@ -246,12 +288,14 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">无</option>
+                <option value="2">有</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">无</option>
+                <option value="2">有</option>
               </select>
             </div>
          </div>
@@ -261,12 +305,16 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">正常</option>
+                <option value="2">苍白</option>
+                <option value="3">充血</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">正常</option>
+                <option value="2">苍白</option>
+                <option value="3">充血</option>
               </select>
             </div>
          </div>
@@ -275,13 +323,31 @@
             <label class="col-xs-3 control-label">C/D值<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
-                <option value="1" selected="selected">0.3</option>
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3" selected="selected">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1.0">1.0</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
-                <option value="1" selected="selected">0.3</option>
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3" selected="selected">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1.0">1.0</option>
               </select>
             </div>
          </div>
@@ -291,12 +357,16 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">正常</option>
+                <option value="2">弥散</option>
+                <option value="3">消失</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">正常</option>
+                <option value="2">弥散</option>
+                <option value="3">消失</option>
               </select>
             </div>
          </div>
@@ -306,12 +376,14 @@
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">平复</option>
+                <option value="2">脱离</option>
               </select>
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
               <select class="drop form-control needinput" name="drop">
                 <option value="1" selected="selected">平复</option>
+                <option value="2">脱离</option>
               </select>
             </div>
          </div>
@@ -319,22 +391,22 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">视网膜备注<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">其他<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
             <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
             <div class="col-xs-3">
-                <input class="form-control" type="text" name="du" value="" maxlength="20" placeholder="" />
+                <input class="form-control" type="text" name="du" value="" maxlength="" placeholder="" />
             </div>
          </div>
 

@@ -1295,6 +1295,20 @@ jQuery.validator.addMethod("pFloatFix", function(value, element,opt) {
      return state;
 }, "请填写正确的正数");
 
+
+// 判断浮点数value是否大于0
+jQuery.validator.addMethod("floatFix", function(value, element,opt) {
+     var state = this.optional(element) || /^^[-\+]?\d+(\.\d+)?$/.test(value);
+     if(value&&state){
+     	var _self = $(element);
+     	 var opt = opt || 2;
+     	 _self.blur(function () {
+     	 	_self.val(new Number(value).toFixed(opt));
+     	 });
+     }
+     return state;
+}, "请填写正确的数字");
+
 // 判断浮点数value是否不等于0
 jQuery.validator.addMethod("isFloatNEqZero", function(value, element) {
      value=parseFloat(value);

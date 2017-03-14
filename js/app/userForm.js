@@ -17,7 +17,7 @@ define(['pinyin'],function () {
         $(this).parents('.tr-op').remove();
       });
       $('.s-opTr').click(function () {
-        $('.tbody-op').append('<tr class="tr-op"><td><select class="drop form-control" name="drop"><option value="" selected="selected">药品1号</option></select></td><td><select class="drop form-control" name="drop"><option value="1" selected="selected">左眼</option><option value="2" >右眼</option></select></td><td><select class="drop form-control" name="drop"><option value="1" selected="selected">qid</option></select></td><td><input class="form-control" type="text" name="day" value="" maxlength="20" placeholder="" /></td><td class="td-op"><span class="s-opDel">-</span></td></tr>');
+        $('.tbody-op').append('<tr class="tr-op"><td><select class="drop form-control needinput" name="drop"><option value="" selected="selected">请选择</option><option value="1">药品1号</option></select></td><td><select class="drop form-control needinput" name="drop"><option value="" selected="selected">请选择</option><option value="1">右眼</option><option value="2">左眼</option><option value="3" >双眼</option></select></td><td><select class="drop form-control needinput" name="drop"><option value="" selected="selected">请选择</option><option value="1">Bid</option><option value="2">qid</option><option value="3">tid</option><option value="4">qd</option></select></td><td><input class="form-control pInt" type="text" name="day" value="" maxlength="20" placeholder="" /></td><td class="td-op"><span class="s-opDel">-</span></td></tr>');
         $('.tbody-op').find('.s-opDel:last').click(function () {
           $(this).parents('.tr-op').remove();
         });

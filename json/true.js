@@ -1,1 +1,1 @@
-{"tip":1,"state":true,"msg":"信息提交成功！"}
+{"tip":0,"state":true,"msg":"信息提交成功！"}

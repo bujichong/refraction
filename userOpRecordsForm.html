@@ -18,12 +18,12 @@
 <div class="wrapper-iframeForm">
     <!-- <h3 class="h3-form"><span class="span-title">筹建医院-修改</span></h3> -->
     <!-- <form class="soForm hk_form pad-t15"> -->
-<form class="form-horizontal formA easy-form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
+<form class="form-horizontal formA hk_form" role="form" method="post" data-opt="" id="vform" action="json/true.js">
 
        <div class="form-group">
           <label class="col-xs-3 control-label">手术序号：</label>
           <div class="col-xs-3">
-                <input class="form-control" type="text" name="year" value="" maxlength="20" placeholder="" />
+                <input class="form-control pInt" type="text" name="year" value="" maxlength="20" placeholder="" />
           </div>
        </div>
 
@@ -33,45 +33,119 @@
          <div class="form-group">
             <label class="col-xs-3 control-label">手术方式<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                  <select class="drop form-control" name="drop">
-                    <option value="1" selected="selected">请选择...</option>
-                  </select>
+                    <select class="drop form-control needinput" name="drop">
+                      <option value="" selected="selected">请选择</option>
+                      <option value="1">表层手术</option>
+                      <option value="2">LASIK</option>
+                      <option value="3">全飞秒</option>
+                      <option value="4">ICL</option>
+                      <option value="5">增效</option>
+                      <option value="6">其他</option>
+                    </select>
             </div>
               <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
               <div class="col-xs-3">
-                  <select class="drop form-control" name="drop">
-                    <option value="1" selected="selected">请选择...</option>
-                  </select>
+                    <select class="drop form-control needinput" name="drop">
+                      <option value="" selected="selected">请选择</option>
+                      <option value="1">表层手术</option>
+                      <option value="2">LASIK</option>
+                      <option value="3">全飞秒</option>
+                      <option value="4">ICL</option>
+                      <option value="5">增效</option>
+                      <option value="6">其他</option>
+                    </select>
               </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">手术方式选项1<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                  <select class="drop form-control" name="drop">
-                    <option value="1" selected="selected">请选择...</option>
-                  </select>
+                    <select class="drop form-control needinput" name="drop">
+                      <option value="" selected="selected">请选择</option>
+                      <optgroup label="表层手术">
+                        <option>PRK</option>
+                        <option>LASEK</option>
+                        <option>epiLASIK</option>
+                        <option>transPRK</option>
+                      </optgroup>
+                      <optgroup label="LASIK">
+                        <option>SBK</option>
+                        <option>飞秒LASIK</option>
+                      </optgroup>
+                      <optgroup label="全飞秒">
+                        <option>FLEX</option>
+                        <option>SMILE</option>
+                      </optgroup>
+                      <optgroup label="ICL">
+                        <option>ICL</option>
+                        <option>TICL</option>
+                      </optgroup>
+                      <option>其他</option>
+                    </select>
             </div>
               <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
               <div class="col-xs-3">
-                  <select class="drop form-control" name="drop">
-                    <option value="1" selected="selected">请选择...</option>
-                  </select>
+                    <select class="drop form-control needinput" name="drop">
+                      <option value="" selected="selected">请选择</option>
+                      <optgroup label="表层手术">
+                        <option>PRK</option>
+                        <option>LASEK</option>
+                        <option>epiLASIK</option>
+                        <option>transPRK</option>
+                      </optgroup>
+                      <optgroup label="LASIK">
+                        <option>SBK</option>
+                        <option>飞秒LASIK</option>
+                      </optgroup>
+                      <optgroup label="全飞秒">
+                        <option>FLEX</option>
+                        <option>SMILE</option>
+                      </optgroup>
+                      <optgroup label="ICL">
+                        <option>ICL</option>
+                        <option>TICL</option>
+                      </optgroup>
+                      <option>其他</option>
+                    </select>
               </div>
          </div>
 
          <div class="form-group">
             <label class="col-xs-3 control-label">手术方式选项2<em class="em-og">(OD)</em>：</label>
             <div class="col-xs-3">
-                  <select class="drop form-control" name="drop">
-                    <option value="1" selected="selected">请选择...</option>
-                  </select>
+                    <select class="drop form-control needinput" name="drop">
+                      <option value="" selected="selected">请选择</option>
+                      <optgroup label="激光手术">
+                        <option>普通</option>
+                        <option>波前引导</option>
+                        <option>Q值调整</option>
+                        <option>地形图引导</option>
+                        <option>角膜交联</option>
+                      </optgroup>
+                      <optgroup label="ICL手术">
+                        <option>V4</option>
+                        <option>V4c</option>
+                      </optgroup>
+                      <option>其他</option>
+                    </select>
             </div>
               <label class="col-xs-2 control-label"><em class="em-og">(OS)</em>：</label>
               <div class="col-xs-3">
-                  <select class="drop form-control" name="drop">
-                    <option value="1" selected="selected">请选择...</option>
-                  </select>
+                    <select class="drop form-control needinput" name="drop">
+                      <option value="" selected="selected">请选择</option>
+                      <optgroup label="激光手术">
+                        <option>普通</option>
+                        <option>波前引导</option>
+                        <option>Q值调整</option>
+                        <option>地形图引导</option>
+                        <option>角膜交联</option>
+                      </optgroup>
+                      <optgroup label="ICL手术">
+                        <option>V4</option>
+                        <option>V4c</option>
+                      </optgroup>
+                      <option>其他</option>
+                    </select>
               </div>
          </div>
         </fieldset>

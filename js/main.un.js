@@ -3,6 +3,7 @@
 
 var v=".js?v="+(new Date()).getTime();
 require.config({
+    baseUrl: 'js/',
     map: {
         '*': {'css': 'css.min'}
     },

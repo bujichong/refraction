@@ -37,6 +37,9 @@ define({
           ,{title:'门诊号',field:'outpatient',width:100}
         ]],
         url:'json/list.js',
+        onDblClickRow : function (index,row) {
+          window.location.href = 'userIndex.html?id='+row.id;
+        },
         onLoadSuccess : function (data) {
           $('.a-opDel').click(function () {
             var url  = $(this).attr('href');

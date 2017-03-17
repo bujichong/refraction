@@ -1098,6 +1098,12 @@ var $hook = {
             });
         }
 
+        if ($('.drop').length) {
+            $('.drop').each(function () {
+                var v = $(this).attr('rel');
+                if (v) {$(this).val(v);};
+            })
+        };
 
         if ($('.required').length) {
             $('.required').each(function () {

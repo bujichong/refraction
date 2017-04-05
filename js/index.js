@@ -67,15 +67,16 @@ var eyeIndex = {
         });
       },
       sideNavE : function () {
-        $('.s-subnav,.s-sidenav').click(function() {
-          var url = $(this).attr('rel');
-          if (url) {
-            $('.s-subnav-now').removeClass('s-subnav-now');
-            $('.s-sidenav-now').removeClass('s-sidenav-now');
-            $(this).addClass('s-subnav-now');
-            $('#mainIframe').attr('src',url);
-          };
+        $('.li-sidenav').on('click','.s-subnav',function () {
+            var url = $(this).attr('rel');
+            if (url) {
+              $('.s-subnav-now').removeClass('s-subnav-now');
+              $('.s-sidenav-now').removeClass('s-sidenav-now');
+              $(this).addClass('s-subnav-now');
+              $('#mainIframe').attr('src',url);
+            };
         });
+
         $('.s-sidenav').click(function() {
           var url = $(this).attr('rel');
           if (url) {

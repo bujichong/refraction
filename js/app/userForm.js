@@ -13,6 +13,25 @@ define(['pinyin'],function () {
       },
     diagnosed : function () {
       window.console && console.log('diagnosed init');
+
+    $('#doctor').combogrid({
+        panelWidth:260,
+        // panelHeight:300,
+        delay: 500,
+        mode: 'remote',
+        url:'json/list.js',
+        idField: 'realName',
+        striped : true,
+        fitColumns : true,
+        textField: 'realName',
+        columns: [[
+           {title:'id',field:'id',width:80}
+          ,{title:'姓名',field:'realName',width:100}
+          ,{title:'性别',field:'sex',sortable:true,width:80}
+        ]]
+    });
+
+
       $('.s-opDel').click(function () {
         $(this).parents('.tr-op').remove();
       });
@@ -22,6 +41,14 @@ define(['pinyin'],function () {
           $(this).parents('.tr-op').remove();
         });
       });
+    },
+    flapreview : function (ulId) {
+      window.updateMenu = function (data) {
+        // window.console && console.log(data);
+        var $ul = $(parent.window.document).find(ulId);
+        window.console && console.log($ul);
+        $ul.append('<li class="li-subnav"><span class="s-subnav" rel="'+data.url+'">'+data.title+'</span></li>');
+      }
     }
   }
   return back;

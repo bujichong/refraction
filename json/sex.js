@@ -1,0 +1,12 @@
+[{
+    "id":1,
+    "text":"男"
+},{
+    "id":2,
+    "text":"女",
+    "selected":true
+},{
+    "id":3,
+    "text":"未知",
+    "selected":true
+}]

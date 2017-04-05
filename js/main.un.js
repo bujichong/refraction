@@ -3,9 +3,9 @@
 
 var v=".js?v="+(new Date()).getTime();
 require.config({
-    baseUrl: 'js/',
+    //baseUrl: "js/",
     map: {
-        '*': {'css': 'css.min'}
+        "*": {"css": "css.min"}
     },
     paths: {
         "my97":"lib/my97/WdatePicker",
@@ -29,43 +29,46 @@ require.config({
         "chinaMap":"lib/echarts/china",
         "WebUploader":"lib/webuploader/webuploader.min",
         "myupload":"lib/webuploader/MyAmdWebUpload",
-        'baidueditor': 'lib/ueditor1.4.3.3-utf8-jsp/myue',
-        'bdlang': 'lib/ueditor1.4.3.3-utf8-jsp/lang/zh-cn/zh-cn',
-        'zeroclipboard': 'lib/ueditor1.4.3.3-utf8-jsp/third-party/zeroclipboard/ZeroClipboard.min'
+        "baidueditor": "lib/ueditor1.4.3.3-utf8-jsp/myue",
+        "bdlang": "lib/ueditor1.4.3.3-utf8-jsp/lang/zh-cn/zh-cn",
+        "zeroclipboard": "lib/ueditor1.4.3.3-utf8-jsp/third-party/zeroclipboard/ZeroClipboard.min"
     },
     shim:{
-        "jquery.validate":['jquery'],
-        "layer.min":['jquery'],
-        "jquery.extend":['param','layer.min','jquery.validate','my97'],
-        "easyui":['jquery'],
-        // "jquery.jdirk":['jquery'],
-        "easyui.extend":['easyui'],
-        "bootstrap":['jquery'],
-        'pinyin': ['pinyin_dict'],
-        'template': {exports: 'template'},
-        "chinaMap":['echarts','echartsMap'],
-        "pub":['jquery.extend','easyui.extend'],
-        'baidueditor': {deps: ['lib/ueditor1.4.3.3-utf8-jsp/ueditor.config', 'css!lib/ueditor1.4.3.3-utf8-jsp/themes/default/css/ueditor']},
-        'bdlang':{deps: ['baidueditor']}
+        "jquery.validate":["jquery"],
+        "layer.min":["jquery"],
+        "jquery.extend":["param","layer.min","jquery.validate","my97"],
+        "easyui":["jquery"],
+        // "jquery.jdirk":["jquery"],
+        "easyui.extend":["easyui"],
+        "bootstrap":["jquery"],
+        "pinyin": ["pinyin_dict"],
+        "template": {exports: "template"},
+        "chinaMap":["echarts","echartsMap"],
+        "pub":["jquery.extend","easyui.extend"],
+        "baidueditor": {deps: ["lib/ueditor1.4.3.3-utf8-jsp/ueditor.config", "css!lib/ueditor1.4.3.3-utf8-jsp/themes/default/css/ueditor"]},
+        "bdlang":{deps: ["baidueditor"]}
     }
 });
 
 require(["pub"],function(){
     var crumb=$('body').attr("data-js");
     if(crumb){
-        var crumbArr = crumb.split(":");
-        var modId = crumbArr[0] , funcId = crumbArr[1]||'init';
-        window.console && console.log('page执行 app/'+modId+'.js中的'+funcId+'方法');
-        require(['app/'+modId],function(mod){
-        // require(['app/'+modId],function(mod){
-            if(mod){
-                var init=mod[funcId];
-                if(init&&$.isFunction(init)){
-                    mod[funcId](window);
-                }else{
-                    window.console && console.log("请在"+modId+".js文件中定义"+funcId+"方法");
+        var crumbArr = crumb.split('||');
+        $.each(crumbArr,function(i,v){
+            var vArr = v.split(":");
+            var modId = vArr[0] , funcId = vArr[1]||'init';
+            window.console && console.log('page执行 app/'+modId+'.js中的'+funcId+'方法');
+            // require(['/js/app/'+modId+v],function(mod){
+            require(['app/'+modId],function(mod){
+                if(mod){
+                    var init=mod[funcId];
+                    if(init&&$.isFunction(init)){
+                        mod[funcId](window);
+                    }else{
+                        window.console && console.log("请在"+modId+".js文件中定义"+funcId+"方法");
+                    }
                 }
-            }
+            });
         });
     }
 });

@@ -65,7 +65,6 @@ input:-ms-input-placeholder {color: #ccc !important;}
 .s-closeFieldset .em-x{display: -moz-inline-stack;display:inline-block;*display:inline;*zoom:1;width:19px;height: 18px;background:url(../images/icon/io-x.png) no-repeat 0 0;vertical-align: middle;}
 .s-closeFieldset:hover{color: #c00;border-color: #c00;}
 .b-required{font-family:' SimSun'; color:#f50202;font-weight: normal;margin-left: 3px;}
-.form-control.txtNoVal{color:#aaa;}
 .form-control.error{
   border-color: #ec8d8c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -81,6 +80,10 @@ input:-ms-input-placeholder {color: #ccc !important;}
 .btn-formS{padding:7px 25px;font-weight: bold;margin:0 5px;}
 .btn-cancel:hover{background-color: #f1a02d;}
 textarea.form-control{height:70px;}
+.form-inline .input-group input.input-group-addon{float:left;width:29px;height:28px;padding:6px;cursor:hand;cursor:pointer;}
+.same-group{position: relative;}
+.lab-sameChk{position: absolute;right:0px;top:0px;}
+
 
 /* table-a */
 .table-a{width:99.5%;border: 1px solid #BFBFBF;border-collapse: collapse;}
@@ -95,7 +98,7 @@ textarea.form-control{height:70px;}
 
 .form-inline .input-group-a .form-control{width:55px;padding:4px;}
 .form-inline .input-group-b .form-control{width:55px;padding:4px;}
-.form-inline .input-group-c .form-control{width:45px;padding:4px;}
+.form-inline .input-group-c .form-control{width:55px;padding:4px;}
 
 
 /* required inputmark */
@@ -112,6 +115,17 @@ textarea.form-control{height:70px;}
 .ul-powerTree .tree-file{background:url(../images/easyui/i-key.png) no-repeat ;}
 .combo-panel{border:1px solid #e5e5e5;}
 .combo-arrow{border-left: 1px solid #e5e5e5;}
+
+.combo-panel .datagrid-view{border-top:0px;}
+.combo-panel .datagrid-cell{line-height:25px!important;height:25px!important;}
+.combo-panel .datagrid-row,.combo-panel .datagrid-header-row{height:25px;}
+.combo-panel .datagrid-body td{border-right-width:1px;}
+.combo-p .combo-panel{border-color:#75d2dc;}
+.combo-panel .datagrid-header td,
+.combo-panel .datagrid-header-inner{background-color: #eee;}
+
+.combo{margin-right: 20px;}
+
 
 .err-404{position: absolute;width:580px;height:280px;top:50%;left:50%;margin:-200px 0 0 -290px;}
 

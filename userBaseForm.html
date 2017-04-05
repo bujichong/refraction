@@ -201,12 +201,12 @@
               </div>
               <label class="col-xs-2 control-label">性别：</label>
               <div class="col-xs-3">
-                <select id="sex" class="drop form-control needinput" name="sex">
-                  <option value="" selected="selected" >请选择...</option>
+                <select id="sex" class="drop form-control needinput easyui-combobox" name="sex" data-options="valueField:'id',textField:'text',url:'json/sex.js',multiple:true"></select>
+<!--                   <option value="" selected="selected" >请选择...</option>
                   <option value="male">男</option>
                   <option value="female">女</option>
-                  <option value="unknow">未知</option>
-                </select>
+                  <option value="unknow">未知</option> -->
+
               </div>
            </div>
 
@@ -283,7 +283,7 @@
 
 
 
-<script src="js/require.js" data-main="js/main.un"></script>
+<script src="js/require.js" data-main="js/main"></script>
 </body>
 
 </html>

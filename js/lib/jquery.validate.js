@@ -1550,6 +1550,6 @@ function Getsex(psidno){
         return false
     }
     var tempid=sexno%2;
-    sex = (tempid==0)?'female':'male';
+    sex = (tempid==0)?'2':'1';
     return sex;
 }
